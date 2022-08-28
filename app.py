@@ -49,7 +49,7 @@ links = st.sidebar.multiselect(
 ) 
 
 df_selection = df.query( 
-    "`Name of BB` ==@bb_number & `Relative Position of Canada`==@position & `Links with domestic Payments Modernization work`==@links" 
+    "`BB Number` ==@bb_number & `Relative Position of Canada`==@position & `Links with domestic Payments Modernization work`==@links" 
 ) 
 
 #st.dataframe (df_selection) 
