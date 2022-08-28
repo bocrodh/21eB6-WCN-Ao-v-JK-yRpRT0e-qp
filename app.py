@@ -54,7 +54,7 @@ df_selection = df.query("`Name of BB` ==@bb_number & `Relative Position of Canad
 fig = go.Figure(data = go.Table( 
     header=dict(values=list(df_selection.columns), 
                 fill_color='#FD8E72'),
-    cells = dict(values=df_selection[1:])))  
+    cells = dict(values=df_selection.values)))  
                 
 fig.update_layout()
 
