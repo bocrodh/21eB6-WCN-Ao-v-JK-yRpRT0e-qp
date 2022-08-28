@@ -29,8 +29,8 @@ df = df[~df['Name of BB'].isnull()]
 st.sidebar.header("Please Filter Here:") 
 bb_number = st.sidebar.multiselect( 
     "Building Block Number:",  
-    options=df["Building Block Number"].unique(), 
-    default=df['Building Block Number'].unique(),
+    options=df["BB Number"].unique(), 
+    default=df['BB Number'].unique(),
 )  
 
 
@@ -47,7 +47,7 @@ links = st.sidebar.multiselect(
 ) 
 
 df_selection = df.query( 
-    "`Name of BB` ==@bb_number & `Relative Position of Canada`==@position & `Links with domestic Payments Modernization work`==@links" 
+    "`BB Number` ==@bb_number & `Relative Position of Canada`==@position & `Links with domestic Payments Modernization work`==@links" 
 ) 
 
 #st.dataframe (df_selection) 
