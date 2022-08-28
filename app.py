@@ -50,11 +50,6 @@ links = st.sidebar.multiselect(
 
 df_selection = df.query("`Name of BB` ==@bb_number & `Relative Position of Canada`==@position & `Links with domestic Payments Modernization work` ==@links") 
 
-df_selection = st.multiselect( 
-    "Filter fields",  
-    options=list(df_selection.columns),  
-)
-
 #Creating relevant charts
 fig = go.Figure(data = go.Table( 
     header=dict(values=list(df_selection[:1]), 
@@ -63,4 +58,7 @@ fig = go.Figure(data = go.Table(
                 
 fig.update_layout()
 
-st.write(fig)
+filtered = st.multiselect("Filter fields", options=list(df_selection.columns), default=list(df_selection.columns))
+
+
+st.write(fig[filtered])
