@@ -56,9 +56,10 @@ df_selection = df.query(
 filtered = st.multiselect("Filter fields", options=list(df_selection.columns))
 
 fig = go.Figure(data=[go.Table(
-    header=dict(values=list(filtered)
-                fill_color='paleturquoise',
-                align='center'),
+    header=dict(values=list(filtered),
+                fill_color='cornflowerblue',
+                align='center', 
+                font=dict(color='white', size=12)),
     cells=dict(values=[df_selection[col] for col in filtered],
                fill_color='lavender',
                align='center'))
