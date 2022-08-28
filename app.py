@@ -23,7 +23,9 @@ df = pd.read_csv(url)
 
 #Formatting dataframe
 df = df.drop_duplicates(keep='first') 
-df = df[~df['Name of BB'].isnull()]  
+df = df[~df['Name of BB'].isnull()]   
+df = df.fillna('')
+
 
 #Filters
 st.sidebar.header("Please Filter Here:") 
