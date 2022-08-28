@@ -17,18 +17,6 @@ st.set_page_config(page_title="Main CB dashboard",
                   layout="wide", 
 ) 
 
-m = st.markdown("""
-<style>
-div.stButton > button:first-child {
-    background-color: #0099ff;
-    color:#ffffff;
-}
-div.stButton > button:hover {
-    background-color: #00ff00;
-    color:#ff0000;
-    }
-</style>""", unsafe_allow_html=True)
-
 #Reading Main CB Dashboard tab from workbook 
 url = (r'https://github.com/bocrodh/xb_payment_WG_dashboard/blob/main/CB%20BB%20Dashboard%20for%20Canada%20(September%202022).csv?raw=true')
 df = pd.read_csv(url)
@@ -81,4 +69,14 @@ fig.update_layout(margin={"r": 0, "t": 0, "l": 0, "b": 0}, height=800)
 
 st.plotly_chart(fig, use_container_width=True)
 
+st.markdown(
+    """
+<style>
+span[data-baseweb="tag"] {
+  background-color: blue !important;
+}
+</style>
+""",
+    unsafe_allow_html=True,
+)
 
