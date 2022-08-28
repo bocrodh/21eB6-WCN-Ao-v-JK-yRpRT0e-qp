@@ -55,4 +55,4 @@ filtered = st.multiselect(
 df_selection = df.query("`Name of BB` ==@bb_number & `Relative Position of Canada`==@position & `Links with domestic Payments Modernization work` ==@links") 
 
 filtered = st.multiselect("Filter fields", options=list(df_selection.columns), default=list(df_selection.columns))
-st.write(df_selection[filtered], 1200, 700) 
+st.dataframe(df_selection[filtered], 1200, 700) 
