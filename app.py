@@ -52,13 +52,13 @@ df_selection = df.query("`Name of BB` ==@bb_number & `Relative Position of Canad
 
 #Creating relevant charts
 fig = go.Figure(data = go.Table( 
-    header=dict(values=list(df_selection[:1]), 
+    header=dict(values=list(df_selection.columns), 
                 fill_color='#FD8E72'),
     cells = dict(values=df_selection[1:])))  
                 
 fig.update_layout()
 
-filtered = st.multiselect("Filter fields", options=list(df_selection.columns), default=list(df_selection.columns))
+filtered = st.multiselect("Filter fields", options=list(df_selection.columns))
 
 
 st.write(fig[filtered])
