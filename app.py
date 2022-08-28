@@ -55,10 +55,9 @@ fig = go.Figure(data=[go.Table(
                 align='left'),
     cells=dict(values=df_selection.transpose().values.tolist(),
                fill_color='lavender',
-               align='left'))
-])
-
-filtered = st.multiselect("Filter fields", options=list(df_selection.columns), default=list(df_selection.columns))
+               align='left'))])
+                
+filtered = st.multiselect("Filter fields", options=list(df_selection.columns))
 
 
 st.write(fig[filtered])
