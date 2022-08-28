@@ -58,7 +58,7 @@ fig = go.Figure(data = go.Table(
                 
 fig.update_layout()
 
-filtered = st.multiselect("Filter fields", options=list(df_selection.columns), default=list(df_selection.columns).unique())
+filtered = st.multiselect("Filter fields", options=list(df_selection.columns), default=list(df_selection.columns))
 
 
 st.write(fig[filtered])
