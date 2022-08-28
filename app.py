@@ -63,6 +63,7 @@ fig = go.Figure(data=[go.Table(
                fill_color='lavender',
                align='left'))])
                 
+filtered = st.multiselect("Filter fields", options=list(df_selection.columns), default=df["Building Block Number"])
 
 
 st.write(fig[filtered])
