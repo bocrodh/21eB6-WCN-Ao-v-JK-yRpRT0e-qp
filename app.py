@@ -19,8 +19,8 @@ st.set_page_config(page_title="Main CB dashboard",
                   ) 
 
 #Reading Main CB Dashboard tab from workbook 
-url = (r"C:\\Users\\rodh\\Desktop\\CB BB Dashboard for Canada (September 2022).csv")
-df = pd.read_csv(url) 
+url = (r'https://github.com/bocrodh/xb_payment_WG_dashboard/blob/main/CB%20BB%20Dashboard%20for%20Canada%20(September%202022).csv?raw=true')
+df = pd.read_csv(url)
 
 #Formatting dataframe
 df = df.drop_duplicates(keep='first') 
