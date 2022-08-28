@@ -65,6 +65,6 @@ fig = go.Figure(data=[go.Table(
                align='center'))
 ])
 
-fig.update_layout(title_text="title", margin={"r": 0, "t": 0, "l": 0, "b": 0}, height=800)
+fig.update_layout(margin={"r": 0, "t": 0, "l": 0, "b": 0}, height=800)
 
 st.write(fig) 
