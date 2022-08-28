@@ -53,5 +53,5 @@ df_selection = df.query(
 ) 
 
 #st.dataframe (df_selection) 
-filtered = st.multiselect("Filter fields", options=list(df_selection.columns)))
+filtered = st.multiselect("Filter fields", options=list(df_selection.columns))
 st.dataframe(df_selection[filtered], 1200, 700) 
