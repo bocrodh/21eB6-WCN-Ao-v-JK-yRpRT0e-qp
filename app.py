@@ -67,4 +67,5 @@ fig = go.Figure(data=[go.Table(
 
 fig.update_layout(margin={"r": 0, "t": 0, "l": 0, "b": 0}, height=800)
 
-st.write(fig) 
+st.write(st.plotly_chart(fig, use_container_width=True)
+)  
