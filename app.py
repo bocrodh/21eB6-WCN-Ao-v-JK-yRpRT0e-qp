@@ -57,7 +57,7 @@ filtered = st.multiselect("Filter fields", options=df_selection.columns)
 
 fig = go.Figure(data=[go.Table(
     header=dict(values=list(filtered),
-                fill_color='darkcyan',
+                fill_color='#293242',
                 align='center', 
                 font=dict(color='white', size=15)),
     cells=dict(values=[df_selection[col] for col in filtered],
@@ -72,9 +72,7 @@ st.plotly_chart(fig, use_container_width=True)
 st.markdown(
     """
 <style>
-span[data-baseweb="tag"] {
-  background-color: blue !important;
-}
+span[data-baseweb="tag"] {background-color: blue !important;}
 </style>
 """,
     unsafe_allow_html=True,
