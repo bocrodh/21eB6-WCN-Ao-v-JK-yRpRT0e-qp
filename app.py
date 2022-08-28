@@ -61,7 +61,7 @@ fig = go.Figure(data=[go.Table(
                 align='center', 
                 font=dict(color='white', size=15)),
     cells=dict(values=[df_selection[col] for col in filtered],
-               fill_color='#E3E4E0',
+               fill_color='#A4A3A1',
                align='center'))
 ])
 
