@@ -53,7 +53,7 @@ df_selection = df.query(
 ) 
 
 #st.dataframe (df_selection) 
-filtered = st.multiselect("Filter fields", options=df_selection['BB Number'].unique())
+filtered = st.multiselect("Filter fields", options=df_selection.columns, default=df["BB Number"])
 
 fig = go.Figure(data=[go.Table(
     header=dict(values=list(filtered),
