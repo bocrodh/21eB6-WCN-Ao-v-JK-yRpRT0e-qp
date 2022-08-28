@@ -1,0 +1,68 @@
+# -*- coding: utf-8 -*-
+"""""""""""""""""""""""""""""""""""""""""""""""
+Date: August 28, 2022                         "
+Title: Cross-Border Payments WG Dashboard     "
+Author: bocrodh                               "
+"""""""""""""""""""""""""""""""""""""""""""""""
+
+#Import libraries 
+import pandas as pd 
+import streamlit as st
+import plotly.express as px
+import plotly.graph_objects as go
+
+
+#Create blank webpage 
+st.set_page_config(page_title="Main CB dashboard", 
+                  page_icon=":money_with_wings:", 
+                  layout="wide" 
+                  ) 
+
+#Reading Main CB Dashboard tab from workbook 
+url = (r"C:\\Users\\rodh\\Desktop\\CB BB Dashboard for Canada (September 2022).csv")
+df = pd.read_csv(url) 
+
+#Formatting dataframe
+df = df.drop_duplicates(keep='first') 
+df = df[~df['Name of BB'].isnull()]  
+df.dtypes
+
+#Filters
+st.sidebar.header("Please Filter Here:") 
+bb_number = st.sidebar.multiselect( 
+    "Building Block Number:",  
+    options=df["Building Block Number"].unique(), 
+    default=df['Building Block Number'].unique(),
+)  
+
+
+position = st.sidebar.multiselect( 
+    "Relative Position of Canada:",  
+    options=df["Relative Position of Canada"].unique(), 
+    default=df["Relative Position of Canada"].unique()
+) 
+
+links = st.sidebar.multiselect( 
+    "Links with domestic Payments Modernization work:",  
+    options=df["Links with domestic Payments Modernization work"].unique(), 
+    default=df["Links with domestic Payments Modernization work"].unique()
+) 
+
+
+
+df_selection = df.query("`Name of BB` ==@bb_number & `Relative Position of Canada`==@position & `Links with domestic Payments Modernization work` ==@links") 
+
+df_selection = st.multiselect( 
+    "Filter fields",  
+    options=list(df_selection.columns),  
+)
+
+#Creating relevant charts
+fig = go.Figure(data = go.Table( 
+    header=dict(values=list(df_selection[:1]), 
+                fill_color='#FD8E72'),
+    cells = dict(values=df_selection[1:])))  
+                
+fig.update_layout()
+
+st.write(fig)
