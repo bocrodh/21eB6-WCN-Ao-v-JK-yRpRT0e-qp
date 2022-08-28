@@ -52,7 +52,7 @@ df_selection = df.query("`Name of BB` ==@bb_number & `Relative Position of Canad
 fig = go.Figure(data = go.Table( 
     header=dict(values=list(df_selection.columns), 
                 fill_color='#FD8E72'),
-    cells = dict(values=df_selection.values.to_list())))  
+    cells = dict(values=df_selection[1:].to_list())))  
                 
 filtered = st.multiselect("Filter fields", options=list(df_selection.columns), default=list(df_selection.columns))
 
