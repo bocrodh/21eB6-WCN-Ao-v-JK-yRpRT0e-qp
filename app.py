@@ -46,15 +46,13 @@ links = st.sidebar.multiselect(
     default=df["Links with domestic Payments Modernization work"].unique()
 ) 
 
-
-
 df_selection = df.query("`Name of BB` ==@bb_number & `Relative Position of Canada`==@position & `Links with domestic Payments Modernization work` ==@links") 
 
-#Creating relevant charts
+#Formatting table
 fig = go.Figure(data = go.Table( 
     header=dict(values=list(df_selection.columns), 
                 fill_color='#FD8E72'),
-    cells = dict(values=df_selection.values)))  
+    cells = dict(values=df_selection.values.to_ist()))  
                 
 fig.update_layout()
 
