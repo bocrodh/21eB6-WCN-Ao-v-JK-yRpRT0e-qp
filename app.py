@@ -72,7 +72,7 @@ st.plotly_chart(fig, use_container_width=True)
 st.markdown(
     """
 <style>
-span[data-baseweb="tag"] {background-color: blue !important;}
+span[data-baseweb="tag"] {background-color: #9DA2AE !important;}
 </style>
 """,
     unsafe_allow_html=True,
