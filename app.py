@@ -46,7 +46,10 @@ links = st.sidebar.multiselect(
     default=df["Links with domestic Payments Modernization work"].unique()
 ) 
 
-df_selection = df.query("`Name of BB` ==@bb_number & `Relative Position of Canada`==@position & `Links with domestic Payments Modernization work` ==@links") 
+df_selection = df.query( 
+    "`Name of BB` ==@bb_name & `Relative Position of Canada`==@position & `Links with domestic Payments Modernization work`==@links" 
+) 
 
-filtered = st.multiselect("Filter fields", options=list(df_selection.columns), default=list(df_selection["Building Block Number"]))
-st.dataframe(df_selection[filtered], 1200, 700) 
+#st.dataframe (df_selection) 
+filtered = st.multiselect("Filter fields", options=list(df_selection.columns), default=list(df_selection.columns))
+st.dataframe(df_selection[filtered], 1200, 700)
