@@ -61,7 +61,7 @@ fig = go.Figure(data=[go.Table(
                 align='center', 
                 font=dict(color='white', size=15)),
     cells=dict(values=[df_selection[col] for col in filtered],
-               fill_color='#A4A3A1',
+               fill_color='#F6F5F0',
                align='center'))
 ])
 
@@ -72,7 +72,7 @@ st.plotly_chart(fig, use_container_width=True)
 st.markdown(
     """
 <style>
-span[data-baseweb="tag"] {background-color: #9DA2AE !important;}
+span[data-baseweb="tag"] {background-color: #A4A3A1 !important;}
 </style>
 """,
     unsafe_allow_html=True,
