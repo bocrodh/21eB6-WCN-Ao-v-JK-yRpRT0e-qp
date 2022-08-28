@@ -15,7 +15,8 @@ import plotly.graph_objects as go
 st.set_page_config(page_title="Main CB dashboard", 
                   page_icon=":money_with_wings:", 
                   layout="wide" 
-                  ) 
+                  primaryColor="#F6F5FO"
+) 
 
 #Reading Main CB Dashboard tab from workbook 
 url = (r'https://github.com/bocrodh/xb_payment_WG_dashboard/blob/main/CB%20BB%20Dashboard%20for%20Canada%20(September%202022).csv?raw=true')
