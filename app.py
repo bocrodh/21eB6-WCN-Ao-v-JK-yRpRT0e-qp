@@ -64,5 +64,5 @@ fig = go.Figure(data=[go.Table(
                align='left'))])
                 
 
-  filtered = st.multiselect("Filter fields", options=list(df_selection.columns), default=list(df_selection.columns))
+filtered = st.multiselect("Filter fields", options=list(df_selection.columns), default=list(df_selection.columns))
 st.write(df_selection[filtered], 1200, 700) 
