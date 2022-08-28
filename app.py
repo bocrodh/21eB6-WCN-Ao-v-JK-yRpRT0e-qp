@@ -54,15 +54,5 @@ filtered = st.multiselect(
 
 df_selection = df.query("`Name of BB` ==@bb_number & `Relative Position of Canada`==@position & `Links with domestic Payments Modernization work` ==@links") 
 
-#Formatting table
-fig = go.Figure(data=[go.Table(
-    header=dict(values=list(df_selection.columns),
-                fill_color='paleturquoise',
-                align='left'),
-    cells=dict(values=df_selection.transpose().values.tolist(),
-               fill_color='lavender',
-               align='left'))])
-                
-
 filtered = st.multiselect("Filter fields", options=list(df_selection.columns), default=list(df_selection.columns))
-st.write(fig[filtered], 1200, 700) 
+st.table(df_selection[filtered], 1200, 700) 
