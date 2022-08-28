@@ -12,7 +12,7 @@ import plotly.graph_objects as go
 
 
 #Create blank webpage 
-st.set_page_config(page_title="Main CB dashboard", 
+st.set_page_config(page_title="Cross-Border Payments WG dashboard", 
                   page_icon=":money_with_wings:", 
                   layout="wide", 
 ) 
