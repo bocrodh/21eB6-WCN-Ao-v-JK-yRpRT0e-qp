@@ -15,7 +15,6 @@ import plotly.graph_objects as go
 st.set_page_config(page_title="Main CB dashboard", 
                   page_icon=":money_with_wings:", 
                   layout="wide", 
-                  backgroundColor="#F6F5FO"
 ) 
 
 #Reading Main CB Dashboard tab from workbook 
