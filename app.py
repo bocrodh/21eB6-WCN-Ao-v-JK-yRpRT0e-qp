@@ -46,6 +46,12 @@ links = st.sidebar.multiselect(
     default=df["Links with domestic Payments Modernization work"].unique()
 ) 
 
+
+filtered = st.multiselect( 
+    "Filter fields", 
+    options=list(df.columns)
+)
+
 df_selection = df.query("`Name of BB` ==@bb_number & `Relative Position of Canada`==@position & `Links with domestic Payments Modernization work` ==@links") 
 
 #Formatting table
@@ -57,7 +63,6 @@ fig = go.Figure(data=[go.Table(
                fill_color='lavender',
                align='left'))])
                 
-filtered = st.multiselect("Filter fields", options=list(df_selection.columns))
 
 
 st.write(fig[filtered])
