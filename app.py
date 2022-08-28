@@ -17,6 +17,8 @@ st.set_page_config(page_title="Main CB dashboard",
                   layout="wide", 
 ) 
 
+st.markdown('<style>body{background-color: Blue;}</style>',unsafe_allow_html=True)
+
 #Reading Main CB Dashboard tab from workbook 
 url = (r'https://github.com/bocrodh/xb_payment_WG_dashboard/blob/main/CB%20BB%20Dashboard%20for%20Canada%20(September%202022).csv?raw=true')
 df = pd.read_csv(url)
