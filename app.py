@@ -69,3 +69,6 @@ fig.update_layout(margin={"r": 0, "t": 0, "l": 0, "b": 0}, height=800)
 
 st.plotly_chart(fig, use_container_width=True)
 
+st.markdown('<style>body{background-color: #F6F5FO;}</style>',unsafe_allow_html=True)
+
+
