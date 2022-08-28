@@ -64,4 +64,4 @@ fig = go.Figure(data=[go.Table(
                align='left'))
 ])
 
-st.write(fig[filtered], 1200, 700) 
+st.write(fig) 
