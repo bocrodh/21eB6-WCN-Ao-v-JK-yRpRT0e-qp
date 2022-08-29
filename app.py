@@ -84,5 +84,5 @@ span[data-baseweb="tag"] {background-color: #7E7F7A !important;}
     unsafe_allow_html=True,
 )
 
-image = Image.open('https://github.com/bocrodh/xb_payment_WG_dashboard/blob/main/CPMI_BB.jpg')
+image = Image.open('https://images.app.goo.gl/CAxC4ksf7V684JZH7')
 st.image(image, caption='Sunrise by the mountains')
