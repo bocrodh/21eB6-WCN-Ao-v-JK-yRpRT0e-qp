@@ -25,6 +25,11 @@ df = df.drop_duplicates(keep='first')
 df = df[~df['Name of BB'].isnull()]   
 df = df.fillna('')
 
+#Hyperlinks
+planner_link = "https://tasks.office.com/BankofCanada.onmicrosoft.com/en-US/Home/Planner/#/plantaskboard?groupId=12185be2-5934-4383-a53c-1b41a10d5bc4&planId=4PAjzPLa2UChyp0AF-bvXn0AFp-h"
+st.sidebar.write("[Link to Planner](%s)" % planner_link) 
+sharepoint_link = "https://bankofcanada.sharepoint.com/teams/Cross_border_Payments/Shared%20Documents/Forms/AllItems.aspx" 
+st.sidebar.write("[Link to Sharepoint Page](%s)" % sharepoint_link)
 
 #Filters
 st.sidebar.header("Search Criteria:") 
@@ -50,12 +55,6 @@ links = st.sidebar.multiselect(
 df_selection = df.query( 
     "`BB Number` ==@bb_number & `Relative Position of Canada`==@position & `Links with domestic Payments Modernization work`==@links" 
 ) 
-
-#Hyperlinks
-planner_link = "https://tasks.office.com/BankofCanada.onmicrosoft.com/en-US/Home/Planner/#/plantaskboard?groupId=12185be2-5934-4383-a53c-1b41a10d5bc4&planId=4PAjzPLa2UChyp0AF-bvXn0AFp-h"
-st.sidebar.write("[Link to Planner](%s)" % planner_link) 
-sharepoint_link = "https://bankofcanada.sharepoint.com/teams/Cross_border_Payments/Shared%20Documents/Forms/AllItems.aspx" 
-st.sidebar.write("[Link to Sharepoint Page](%s)" % sharepoint_link)
 
 filtered = st.multiselect("Filter fields", options=df_selection.columns, default=['BB Number', 'Name of BB','Relative Position of Canada','Links with domestic Payments Modernization work'])
 
