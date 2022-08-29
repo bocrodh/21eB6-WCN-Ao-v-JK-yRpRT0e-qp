@@ -9,7 +9,8 @@ Author: bocrodh                               "
 import pandas as pd 
 import streamlit as st
 import plotly.graph_objects as go
-
+from PIL import Image
+ 
 #Create blank webpage 
 st.set_page_config(page_title="Cross-Border Payments WG dashboard", 
                   page_icon=":money_with_wings:", 
@@ -83,3 +84,5 @@ span[data-baseweb="tag"] {background-color: #7E7F7A !important;}
     unsafe_allow_html=True,
 )
 
+image = Image.open('https://github.com/bocrodh/xb_payment_WG_dashboard/blob/main/CPMI_BB.jpg')
+st.image(image, caption='Sunrise by the mountains')
