@@ -59,6 +59,13 @@ planner_link = "https://tasks.office.com/BankofCanada.onmicrosoft.com/en-US/Home
 st.sidebar.write("[Planner](%s)" % planner_link) 
 sharepoint_link = "https://bankofcanada.sharepoint.com/teams/Cross_border_Payments/Shared%20Documents/Forms/AllItems.aspx" 
 st.sidebar.write("[Sharepoint Page](%s)" % sharepoint_link)
+boe = "https://www.bankofengland.co.uk/payment-and-settlement/cross-border-payments" 
+st.sidebar.write("[Bank of England Cross-Border Payments Page](%s)" % boe)
+cpmi = "https://www.bis.org/cpmi/cross_border.htm" 
+st.sidebar.write("[CPMI Cross-Border Payments Page](%s)" % cpmi) 
+fsb = "https://www.fsb.org/work-of-the-fsb/financial-innovation-and-structural-change/cross-border-payments/" 
+st.sidebar.write("[FSB Cross-Border Payments Page](%s)" % cpmi) 
+
 
 #Plotly Dataframe
 fig = go.Figure(data=[go.Table(
