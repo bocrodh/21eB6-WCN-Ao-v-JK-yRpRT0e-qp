@@ -29,6 +29,14 @@ df = df.fillna('')
 #Filters
 st.sidebar.header("Filter Criteria:") 
 
+st.markdown("""
+  <style>
+    .css-o18uir.e16nr0p33 {
+      margin-top: -75px;
+    }
+  </style>
+""", unsafe_allow_html=True)
+
 bb_number = st.sidebar.multiselect( 
     "BB Number:",  
     options=df["BB Number"].unique(), 
