@@ -27,7 +27,10 @@ df = df.fillna('')
 
 
 #Filters
-st.sidebar.header("Please Filter Here:") 
+url = "https://share.streamlit.io/mesmith027/streamlit_webapps/main/MC_pi/streamlit_app.py"
+st.write("check out this [link](%s)" % url)
+st.markdown("check out this [link](%s)" % url)
+
 bb_number = st.sidebar.multiselect( 
     "BB Number:",  
     options=df["BB Number"].unique(), 
