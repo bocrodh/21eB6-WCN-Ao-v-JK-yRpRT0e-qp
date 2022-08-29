@@ -83,8 +83,3 @@ span[data-baseweb="tag"] {background-color: #7E7F7A !important;}
 """,
     unsafe_allow_html=True,
 )
-
-#Image and Graphs 
-img = Image.open("CPMI_BB.jpg") 
-new_image = img.resize((400, 400))
-st.image(new_image)
