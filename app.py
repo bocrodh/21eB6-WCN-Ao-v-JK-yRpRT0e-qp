@@ -85,7 +85,7 @@ span[data-baseweb="tag"] {background-color: #7E7F7A !important;}
 )
 
 #Image and Graphs 
-img = Image.open("https://github.com/bocrodh/xb_payment_WG_dashboard/blob/main/CPMI_BB.jpg") 
+img = Image.open("CPMI_BB.jpg") 
 st.image(img)
 
 
