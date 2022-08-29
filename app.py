@@ -34,7 +34,7 @@ planner_link = "https://tasks.office.com/BankofCanada.onmicrosoft.com/en-US/Home
 st.sidebar.write("[Link to Planner](%s)" % planner_link)
 
 sharepoint_link = "https://bankofcanada.sharepoint.com/teams/Cross_border_Payments/Shared%20Documents/Forms/AllItems.aspx" 
-st.sidebar.write("[Link to Sharepoint Page](%s)" sharepoint_link)
+st.sidebar.write("[Link to Sharepoint Page](%s)" % sharepoint_link)
 
 bb_number = st.sidebar.multiselect( 
     "BB Number:",  
