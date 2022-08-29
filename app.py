@@ -27,12 +27,13 @@ df = df.fillna('')
 
 
 #Filters
+st.sidebar.header("Search Criteria:") 
+
 bb_number = st.sidebar.multiselect( 
     "BB Number:",  
     options=df["BB Number"].unique(), 
     default=df['BB Number'].unique(),
 )  
-
 
 position = st.sidebar.multiselect( 
     "Relative Position of Canada:",  
