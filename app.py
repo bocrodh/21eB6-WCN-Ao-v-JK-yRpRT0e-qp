@@ -29,18 +29,6 @@ df = df.fillna('')
 #Filters
 st.sidebar.header("Filter Criteria:") 
 
-st.markdown(
-            f'''
-            <style>
-                .reportview-container .sidebar-content {{
-                    padding-top: {1}rem;
-                }}
-                .reportview-container .main .block-container {{
-                    padding-top: {1}rem;
-                }}
-            </style>
-            ''',unsafe_allow_html=True)
-
 bb_number = st.sidebar.multiselect( 
     "BB Number:",  
     options=df["BB Number"].unique(), 
