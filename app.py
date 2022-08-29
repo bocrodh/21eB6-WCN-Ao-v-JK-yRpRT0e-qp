@@ -28,7 +28,7 @@ df = df.fillna('')
 
 #Filters
 url = "https://tasks.office.com/BankofCanada.onmicrosoft.com/en-US/Home/Planner/#/plantaskboard?groupId=12185be2-5934-4383-a53c-1b41a10d5bc4&planId=4PAjzPLa2UChyp0AF-bvXn0AFp-h"
-st.sidebar.write("Planner [link](%s)" % url)
+st.sidebar.write("[Planner](%s)" % url)
 
 bb_number = st.sidebar.multiselect( 
     "BB Number:",  
